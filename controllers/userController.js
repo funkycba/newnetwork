@@ -46,6 +46,7 @@ module.exports = {
         }
     },
     // add and delete friends
+    
     async createFriend(req, res) {
         try {
             const friend = await friends.create(req.body);

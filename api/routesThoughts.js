@@ -1,4 +1,4 @@
-const userSchema = require('express').Router();
+const router = require('express').Router();
 const {
     gatherThoughts,
     getOneThought,
@@ -6,8 +6,8 @@ const {
     deleteThought,
     removeThought,
 
-} = require('../../controllers/thoughtController.js');
+} = require('../controllers/thoughtController.js');
 router.route('/').get(gatherThoughts).post(createThought);
 
 router.route('/:thoughtId').get(getOneThought)
-module.exports = userSchema
+module.exports = router
